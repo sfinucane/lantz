@@ -27,8 +27,7 @@ except:  # on any error just try to grab the version that is installed on the sy
               # so the reported version will be __unknown__
 
 from pint import UnitRegistry
-ureg = UnitRegistry()
-Q_ = ureg.Quantity
+Q_ = UnitRegistry().Quantity
 
 from .log import LOGGER
 from .driver import Driver, Feat, DictFeat, Action, initialize_many, finalize_many

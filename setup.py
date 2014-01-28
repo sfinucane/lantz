@@ -42,6 +42,7 @@ setup(name='Lantz',
       author_email='hernan.grecco@gmail.com',
       url='http://lantz.glugcen.dc.uba.ar/',
       packages=['lantz',
+                'lantz.utils',
                 'lantz.ui',
                 'lantz.simulators',
                 'lantz.drivers'] +

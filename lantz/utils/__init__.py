@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-    lantz.ui
-    ~~~~~~~~
+    lantz.utils
+    ~~~~~~~~~~~
 
-    Implements UI functionality for lantz using Qt.
+    A package with utility modules.
 
     :copyright: 2013 by Lantz Authors, see AUTHORS for more details.
     :license: BSD, see LICENSE for more details.
 """
-
-

@@ -7,6 +7,7 @@ except ImportError:
     from distutils.core import setup
 
 import os
+import sys
 import codecs
 
 
@@ -22,6 +23,10 @@ __doc__ = long_description
 folder = os.path.dirname(os.path.abspath(__file__))
 folder = os.path.join(folder, 'lantz', 'drivers')
 paths = os.listdir(folder)
+
+requirements = []
+if sys.version_info < (3, 4):
+    requirements.append('backport.enum')
 
 companies = [path for path in paths
              if os.path.isdir(os.path.join(folder, path))
@@ -44,7 +49,7 @@ setup(name='Lantz',
       test_suite='lantz.testsuite.testsuite',
       install_requires=['pint>=0.3.1',
                         'stringparser',
-                       ],
+                       ] + requirements,
       zip_safe=False,
       platforms='any',
       extra_require={'colorama':  ['colorama'],
@@ -70,6 +75,7 @@ setup(name='Lantz',
            'Programming Language :: Python',
            'Programming Language :: Python :: 3.2',
            'Programming Language :: Python :: 3.3',
+           'Programming Language :: Python :: 3.4',
            'Topic :: Scientific/Engineering',
            'Topic :: Software Development :: Libraries'
       ],
